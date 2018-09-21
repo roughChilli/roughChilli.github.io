@@ -4,11 +4,37 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style>
+    * {
+        box-sizing: border-box;
+    }
     .outer {
         width: 760px;
         padding: 0 0 8px 0;
         margin: 0px auto;
         border: 2px solid #93B0ED;
+    }
+
+    .header{
+        border: #3076BC 1px solid; 
+        padding:8px; 
+        background: #F5FAFE; 
+        margin: 8px auto;
+        line-height: 22px;
+    }
+
+    .paddingLeft{
+        margin:8px auto;
+        line-height:22px;
+        padding:0 0 0 8px;
+    }
+
+    .bottomLine{
+        border-bottom: #88b4e0 1px dashed;
+    }
+
+    .largeSize{
+        font-size: 25px; 
+        line-height: 30px;
     }
 
     .itskills {
@@ -26,16 +52,6 @@
         font-family: arial, "ˎ̥";
     }
 
-    P {
-        font-size: 12px;
-        line-height: 150%;
-        font-family: 'ˎ̥'
-    }
-
-    .blue {
-        color: #256fb8
-    }
-
     .cvtitle {
         font-weight: 700;
         color: #256fb8;
@@ -47,8 +63,11 @@
         padding-left: 5px;
     }
 
-    .blue1 {
+    .myBlue {
         color: #256fb8;
+    }
+    .myGray {
+        color:#676767;
     }
     .hide{
     	display: none;
@@ -58,22 +77,22 @@
 
 <body>
     <div class="outer">
-        <table class="header" style="BORDER: #3076BC 1px solid; PADDING:8px; BACKGROUND: #F5FAFE; MARGIN: 8px auto;  line-height: 22px;" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
+        <table class="header" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
-                    <td style="border-bottom: #88b4e0 1px dashed" height="30" colspan="3">
-                        <span style="font-size: 25px; line-height: 30px; height: 30px">
+                    <td class="bottomLine" height="30" colspan="3">
+                        <span class="largeSize">
 							<strong>Zachary&nbsp;Qin</strong>
 						</span>
                     </td>
                 </tr>
                 <tr>
-                    <td width="48%">
+                    <td width="50%">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
                                 <tr>
                                     <td height="26" colspan="4">
-                                        <span class="blue1">
+                                        <span class="myBlue">
 											<b>8 years work experience</b>
 										</span>
                                     </td>
@@ -84,24 +103,21 @@
                                 </tr>
                                 <tr>
                                     <td height="20">Mobile:</td>
-                                    <td height="20" colspan="3">0412 871 649</td>
+                                    <td height="20" colspan="3">+61 0412871649</td>
                                 </tr>
                                 <tr>
                                     <td height="20">E-mail:</td>
-                                    <td height="20" colspan="3"><a href="mailto:zach.qin@gmail.com" class="blue1">zach.qin@gmail.com</a></td>
+                                    <td height="20" colspan="3"><a href="mailto:zach.qin@gmail.com" class="myBlue">zach.qin@gmail.com</a></td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
-                    <td width="5%" align="center">
-                    	<hr class="hide" size="75" width="0.5" color=#93B0ED></hr>
-		            </td>
                     <td>
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
                                 <tr>
                                     <td height="26" colspan="4">
-                                        <span class="blue1">
+                                        <span class="myBlue">
 											<b class="hide">Education</b>
 										</span>
                                     </td>
@@ -125,58 +141,25 @@
             </tbody>
         </table>
 		
-		<table class="hide" width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<table class="hide paddingLeft" width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
 		    <tbody>
-		        <tr>
-		            <td width="45%" colspan="2">
-		                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:8px auto;line-height:22px;padding:0 0 0 8px;">
-		                    <tbody>
-		                        <tr>
-		                            <td colspan="2">
-		                                <span class="blue" style="font-size:14px;"><b>The latest work</b></span>
-		                            </td>
-		                        </tr>
-		                        <tr>
-		                            <td width="23%">Company:</td>
-		                            <td>Australia Education Management Group.</td>
-		                        </tr>
-		                        <tr>
-		                            <td>Industry:</td>
-		                            <td>Education</td>
-		                        </tr>
-		                        <tr>
-		                            <td>Job Title:</td>
-		                            <td>Senior Software Engineer</td>
-		                        </tr>
-		                    </tbody>
-		                </table>
-		            </td>
-		            <td width="43" align="center">
-		            </td>
-		            <td width="49%" colspan="2">
-		                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:8px auto;line-height:22px;padding:0 0 0 10px;">
-		                    <tbody>
-		                        <tr>
-		                            <td colspan="2">
-		                                <span class="blue" style="font-size:14px;"><b>Education</b></span>
-		                            </td>
-		                        </tr>
-		                        <tr>
-		                            <td width="23%">Degree:</td>
-		                            <td>Bachelor</td>
-		                        </tr>
-		                        <tr>
-		                            <td>Major:</td>
-		                            <td>Network Engineering</td>
-		                        </tr>
-		                        <tr>
-		                            <td height="22">School:</td>
-		                            <td>Hunan University of Science and Technology</td>
-		                        </tr>
-		                    </tbody>
-		                </table>
-		            </td>
-		        </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="cvtitle"><b>The latest work</b></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="23%">Company:</td>
+                    <td>Australia Education Management Group.</td>
+                </tr>
+                <tr>
+                    <td>Industry:</td>
+                    <td>Education</td>
+                </tr>
+                <tr>
+                    <td>Job Title:</td>
+                    <td>Senior Software Engineer</td>
+                </tr>       
 		    </tbody>
 		</table>
 
@@ -314,8 +297,8 @@
                                 </tr>
                                 <!-- add more experience -->
                                 <tr>
-                                    <td colspan="2" class="text_left">2015/4--2016/9&nbsp;:&nbsp;Kingdee Software( China ) Co., Ltd&nbsp;(1000-5000 people).
-                                        <span style="color:#676767;"><b>[1 year and 5month]</b></span>
+                                    <td colspan="2" class="text_left">2015/4--2016/9&nbsp;:&nbsp;Kingdee Software( China ) Co., Ltd&nbsp;<span class="hide">(1000-5000 people)</span>
+                                        <span class="hide myGray"><b>[1 year and 5month]</b></span>
                                     </td>
                                 </tr>
                                 <tr class="hide">
@@ -344,8 +327,8 @@
                                 </tr>
                                 <!-- add more experience -->
                                 <tr>
-                                    <td colspan="2" class="text_left">2012/11--2015/4&nbsp;:&nbsp;China Information Technology,Inc.&nbsp;(100-500 people)
-                                        <span style="color:#676767;"><b>[2 year and 5month]</b></span>
+                                    <td colspan="2" class="text_left">2012/11--2015/4&nbsp;:&nbsp;China Information Technology,Inc&nbsp;<span class="hide">(100-500 people)</span>
+                                        <span class="hide myGray"><b>[2 year and 5month]</b></span>
                                     </td>
                                 </tr>
                                 <tr class="hide">
@@ -373,8 +356,8 @@
                                 </tr>
                                 <!-- add more experience -->
                                 <tr>
-                                    <td colspan="2" class="text_left">2011/3--2012/7&nbsp;:&nbsp;IBM&nbsp;(&gt;10000 people)
-                                        <span style="color:#676767;"><b>[1 year and 4month]</b></span>
+                                    <td colspan="2" class="text_left">2011/3--2012/7&nbsp;:&nbsp;IBM&nbsp;<span class="hide">(&gt;10000 people)</span>
+                                        <span class="hide myGray"><b>[1 year and 4month]</b></span>
                                     </td>
                                 </tr>
                                 <tr class="hide">
