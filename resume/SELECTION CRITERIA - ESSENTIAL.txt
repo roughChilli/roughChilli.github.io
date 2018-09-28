@@ -2,9 +2,16 @@ SELECTION CRITERIA - ESSENTIAL
 
 1. A relevant degree with subsequent relevant experience, or equivalent extensive experience and specialist knowledge in developing and delivery of digital/web projects.
 
+I graduated from a renowned university majored in Network Engineering, in there I got solid IT knowledge and programming skills. In addition, by the following years, I worked in IT companies, played roles like software engineer, got loads of project experience at the same time.
+
 
 2. Demonstrable understanding of web development best practice including those relating to responsive design, accessibility and user experience.
 
-In the positions I understand the big picture. Some developers love to code so much that they skip the first step — planning — and end up writing code over and over again. First ask, what’s the overall intention, or bigger picture of the project? This leads to understanding priorities and not getting bogged in the insignificant details that may steer you off course.
-Start with the user experience. Paper or a mock-up are cheap to change compared to the cost of scrapping a project your users don’t want to use. A good rule of thumb to remember is that 70 percent of development efforts should be spent on research and design, and then the final 30 percent on programming. By understanding the potential user, and creating a user-friendly design, the development phase will significantly less complex!
-MVP
+In the positions I always try to understand the big picture with a start of a good planning, try to figure out overall intention. This leads to understanding priorities and not getting bogged in the insignificant details. Start with the user experience, paper or a mock-up are cheap to change compared to the cost of scrapping a project. By understanding the potential user, and creating a user-friendly design, the development phase will significantly less complex.
+
+
+3. Experience in front-end development, including within CMS platforms such as Squiz Matrix, WordPress.
+
+Once before, I worked on a project call SAMeBaby, targeting to teach none-English speaking children learning English. It is a good demonstration of the combined usage of not only WordPress, but Moodle.
+
+
