@@ -1,24 +1,42 @@
-SELECTION CRITERIA - ESSENTIAL
+SELECTION CRITERIA STATEMENT
+Front End Developer(Ref: 180650)
 
 1. A relevant degree with subsequent relevant experience, or equivalent extensive experience and specialist knowledge in developing and delivery of digital/web projects.
 
-I graduated from a renowned university majored in Network Engineering, in there I got solid IT knowledge and programming skills. In addition, by the following years, I worked in IT companies, played roles like software engineer, got loads of project experience at the same time.
+I graduated from university majored in Network Engineering, in there I got solid IT knowledge and programming skills. In addition, by the following years, I worked in IT companies, played a key role as software engineer, I regularly take part in project planning, deliver the design into real products, gain loads of project experience. My most successful project called express100, which is focus on logistic information providing, we achieved more 30 million users and rating 4.8 out of 5 in App store. The success of the business proved I am capable to engage in developing and delivery of really digital projects.
+https://itunes.apple.com/us/app/%E5%BF%AB%E9%80%92100/id458270120?mt=8
 
 
 2. Demonstrable understanding of web development best practice including those relating to responsive design, accessibility and user experience.
 
-In the positions I always try to understand the big picture with a start of a good planning, try to figure out overall intention. This leads to understanding priorities and not getting wrong in the insignificant details. Start with the user experience, paper or a mock-up are cheap to change compared to the cost of scrapping a project. By understanding the potential user, and creating a user-friendly design, the development phase will significantly less complex.
-MVP
+In the positions of software developer, I always try to understand the big picture with a start of a good planning, try to figure out overall intention. This leads to understanding priorities and not getting wrong in the insignificant details. Start with the user experience, paper or a mock-up are cheap to change compared to the cost of scrapping a project. By understanding the potential user, and creating a user-friendly design, the development phase will significantly less complex. In terms of user experience, most of my projects are designed to be responsive in both laptop and mobile to achieve user friendly, flex layout, media query and frameworks like Bootstrap are usually be used. User SVGs for the best clarity no matter the device. We also provide M-dot of the website to let mobile browser user access our service easily.
 
 
-3.wordpress experience
+3. Experience in front-end development, including within CMS platforms such as Squiz Matrix, WordPress.
 
-Once before, I worked on a project call SAMeBaby, targeting to teach none-English speaking children learning English. It is a good demonstration of the combined usage of not only WordPress, but Moodle.
+One of my projects call SAMeBaby, aim to teach none-English speaking children learning English. It is a good demonstration of the combined usage of not only WordPress, but Moodle. In the user interface part, the content is edited by WordPress, plug-in used including Advanced Custom Field, Intuitive Custom Post Order, Slider Revolution, and so on.
+http://www.samebaby.com.au/education
 
-4. WCAG2.0 standard.
-It is important to let every kind of user to access our web, 
-All non-text content presented to the user has a text alternative that serves the equivalent purpose.
-Technique: This is viewed by many as the most important success criterion as it allows people who are blind or vision impaired to understand the visual aspects of a Web page.  If something is represented visually, such as an image, it should have a brief text description embedded in the code.  This description should reflect the purpose of the image and the context in which it is being used.
+4. Coding to WCAG 2.0 accessibility standards.
 
-https://www.accessibility.org.au/resources/how-do-i-achieve-the-wcag-standard/
+It is important to let every kind of user to access our web. In the development of Cloud campus mobile app, all non-text content presented to the user has a text alternative that serves the equivalent purpose. This is viewed by many as the most important success criterion as it allows people who are blind or vision impaired to understand the visual aspects of a Web page. If something is represented visually, such as an image, it should have a brief text description embedded in the code. This description should reflect the purpose of the image and the context in which it is being used.
+
+5. Conversion of PSD’s or other graphical designs into high quality, cross-browser/mobile compatible, WCAG 2.0 compliant and valid (semantically correct) HTML / XHTML / CSS3 and Javascript markup. Demonstrated experience in working autonomously and collaboratively as part of a cross functional team.
+
+Every project starts from designs, it is a basic skill to convert graphical designs into markup. My practice is the MVP way (MVP stands for most viable product). After get the design files, the first step is to build a pretty simple demo, could be just a single HTML page, maintains good communication with the project manager and design team, as in the early stage, it's more easy to correct wrong understanding, and than add more things in, like Javascript function, handle event, responsive design. 
+I have a github project called time-table with a history of commits to show this process. The address of project is https://github.com/dontcry2013/time-table.
+
+7. Strong skills in HTML, CSS/SASS, Javascript/jQuery and atleast one JS framework i.e. ReactJS, VueJS, Angular etc, RESTful APIs, Git. Ability to apply responsive design, UX and accessibility principles and techniques.
+
+The above mentioned time-table project well showed my ability in HTML, CSS, jQuery and VueJS. The purpose of project is to help our company to measure teachers workload. For the data input, the best way is through the teaching calender, but every university branches have different format of the calendar. So we made a tool to let the teacher generate the calendar easily. For the best practice part of the design of the project, we would like teachers input as least as possible, in order to achieve that, I use drag and drop way to mark the date, time and classroom in the time table.
+
+The project is nested in github, maintained two branches, I listed many useful git command in https://gist.github.com/dontcry2013/d3cfaf4f9a186c2c25cc28bc27e2a3bb to prevent forget. The first version is written in jQuery, functions like auto generated table, drag and drop have been implemented, but the project move on, we found the core things is data binding, so in the next version VueJS has been used. In the new version, jQuery UI is deprecated by using HTML 5 embedded drag-drop utilities. Data binding with UI, every change of UI, data will change automatically, when submit event is triggered, data will send to server using RESTful API. Even though many of my previous projects used a lot front end technology, I think this small project can demonstrate my skill stack bluntly.
+
+8. Developing mobile applications using hybrid frameworks such as Ionic or JQuery Mobile.
+
+I have a lot of hybrid development experience, including Ionic and React Native. Because the first version of our cloud campus mobile app is based on React Native, and then we changed into Ionic, in the same time, I am still an android native developer using java.
+
+9. Any experience working with AWS is a huge plus.
+
+I have experience working with AWS, especially EC2, RDS and Elastic Beanstalk, in addition, I am quite familiar with Linux and Linux-like system, as before I have 2 years work experience as a back end developer.
 
