@@ -9,9 +9,16 @@
     }
     .outer {
         width: 760px;
+        min-width: 500px;
         padding: 0 0 8px 0;
         margin: 0px auto;
         border: 2px solid #93B0ED;
+    }
+    
+    @media only screen and (max-width: 1000px) {
+        .outer {
+            width: 100%;
+        }
     }
 
     .header{
@@ -39,11 +46,6 @@
 
     .itskills {
         display: none;
-    }
-
-    table {
-        font-size: 12px;
-        line-height: 150%;
     }
 
     td {
@@ -190,23 +192,15 @@
                     <td valign="center" align="left" height="5"></td>
                 </tr>
                 <tr>
-                    <td valign="center" align="left">
-                        <table class="table_set" cellspacing="0" cellpadding="0" width="100%" border="0">
-                            <tbody>
-                                <tr>
-                                    <td class="text_left">Employment Type:
-                                        <span class="text textpadding">Full-time</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left">Desired Position:
-                                        <span class="text textpadding">Software Engineer</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <td class="text_left">Employment Type:
+                        <span class="text textpadding">Full-time</span>
                     </td>
                 </tr>
+                <tr>
+                    <td class="text_left">Desired Position:
+                        <span class="text textpadding">Software Engineer</span>
+                    </td>
+                </tr>        
             </tbody>
         </table>
         <table class="stack" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
@@ -238,7 +232,7 @@
         <table class="experience" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
-                    <td align="left" valign="middle" class="cvtitle">Work Experience</td>
+                    <td align="left" valign="middle" class="cvtitle"><strong>Work Experience</strong></td>
                 </tr>
                 <tr>
                     <td height="5" align="left" valign="middle"></td>
@@ -406,7 +400,7 @@
                                     <td class="text">Android studio, Xcode, MySQL, Sublime Text, Chrome DevTools</td>
                                 </tr>
                                 <tr>
-                                    <td width="16%" class="text_left" valign="top">Description:</td>
+                                    <td class="text_left" valign="top">Description:</td>
                                     <td class="Cur_Val">Cloud campus is an online learning platform deliver multiple ways of teaching and learning for our cooperative education programs.
                                         <br>The first version is developped by using React Native, technics including Router, ES6 and npm, and then transfer the project to moodle offical github repository.
                                         <br>Website:
@@ -437,7 +431,7 @@
                                     <td class="text">Eclipse, Oracle, MongoDB, Node.js, Android studio, Xcode</td>
                                 </tr>
                                 <tr>
-                                    <td width="16%" class="text_left" valign="top">Description:</td>
+                                    <td class="text_left" valign="top">Description:</td>
                                     <td class="Cur_Val">Express100 provide services include intelligent query, delivery status of intelligent push, courier network query, query the delivery time, one click lookup near courier, online send express, etc. Express100 is the largest Chinese express service platform.Express100 mobile terminal daily active users more than 600,000 and the cumulative number of registered users more than 20,000,000.</td>
                                 </tr>
                                 <tr>
@@ -463,7 +457,7 @@
                                     <td class="text">Eclipse, Myeclipse, Sublime Text, Chrome, Mysql Workbench</td>
                                 </tr>
                                 <tr>
-                                    <td width="16%" class="text_left" valign="top">Description:</td>
+                                    <td class="text_left" valign="top">Description:</td>
                                     <td class="Cur_Val">Hybrid development model to achieve cross mobile platform and rapid iteration. Feature: the use of phonegap to implement the structure, the front-end technology including but not limited to HTML5, CSS3, AJAX, jsonp, jQuery, webRTC. Back end: springMVC, webService, mysql, wasp. Function: online purchase, online to find a teacher, personal information and account management, online audio and video, message distribution.</td>
                                 </tr>
                                 <tr>
@@ -483,7 +477,7 @@
                                     <td class="text">Eclipse, Cygwin, Mysql Workbench</td>
                                 </tr>
                                 <tr>
-                                    <td width="16%" class="text_left" valign="top">Description:</td>
+                                    <td class="text_left" valign="top">Description:</td>
                                     <td class="Cur_Val">An android application with the following characters:
                                         <br>1. Socket communication, according to the company protocol.
                                         <br>2. FTP download task.
@@ -518,7 +512,7 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_set">
                             <tbody>
                                 <tr>
-                                    <td width="16%" class="text_left">2006/9--2010/9</td>
+                                    <td class="text_left">2006/9--2010/9</td>
                                     <td width="40%" class="text">Hunan University of Science and Technology</td>
                                     <td width="30%" class="text">Network Engineering</td>
                                     <td width="14%" class="text">Bachelor</td>
