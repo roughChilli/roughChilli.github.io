@@ -1,15 +1,104 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     * {
         box-sizing: border-box;
     }
+    .row:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 600px) {
+        .col-s-1 {
+            width: 8.33%;
+        }
+        .col-s-2 {
+            width: 16.66%;
+        }
+        .col-s-3 {
+            width: 25%;
+        }
+        .col-s-4 {
+            width: 33.33%;
+        }
+        .col-s-5 {
+            width: 41.66%;
+        }
+        .col-s-6 {
+            width: 50%;
+        }
+        .col-s-7 {
+            width: 58.33%;
+        }
+        .col-s-8 {
+            width: 66.66%;
+        }
+        .col-s-9 {
+            width: 75%;
+        }
+        .col-s-10 {
+            width: 83.33%;
+        }
+        .col-s-11 {
+            width: 91.66%;
+        }
+        .col-s-12 {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .col-1 {
+            width: 8.33%;
+        }
+        .col-2 {
+            width: 16.66%;
+        }
+        .col-3 {
+            width: 25%;
+        }
+        .col-4 {
+            width: 33.33%;
+        }
+        .col-5 {
+            width: 41.66%;
+        }
+        .col-6 {
+            width: 50%;
+        }
+        .col-7 {
+            width: 58.33%;
+        }
+        .col-8 {
+            width: 66.66%;
+        }
+        .col-9 {
+            width: 75%;
+        }
+        .col-10 {
+            width: 83.33%;
+        }
+        .col-11 {
+            width: 91.66%;
+        }
+        .col-12 {
+            width: 100%;
+        }
+    }
     .outer {
         width: 760px;
-        min-width: 500px;
+        /*min-width: 350px;*/
         padding: 0 0 8px 0;
         margin: 0px auto;
         border: 2px solid #93B0ED;
@@ -50,14 +139,14 @@
 
     td {
         font-size: 12px;
-        line-height: 150%;
+        line-height: 160%;
         font-family: arial, "ˎ̥";
     }
 
     .cvtitle {
         font-weight: 700;
         color: #256fb8;
-        font-size: 14px;
+        font-size: 14px !important;
         padding-top: 5px;
     }
 
@@ -74,75 +163,82 @@
     .hide{
     	display: none;
     }
+    .responsive-header {
+        width: 97%;
+        border: #3076BC 1px solid; 
+        padding:8px; 
+        background: #F5FAFE; 
+        margin: 8px auto;
+        line-height: 22px;
+    }
+    .experience{
+        margin: 5px 0;
+        color: #256fb8;
+    }
+    .name{
+        font-size: 25px; 
+        line-height: 30px;
+        font-family: arial, "ˎ̥";
+    }
+    .arial{
+        font-size: 12px;
+        line-height: 150%;
+        font-family: arial, "ˎ̥";
+    }
+    .my-table{
+        padding: 0;
+    }
     </style>
 </head>
 
 <body>
     <div class="outer">
-        <table class="header" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td class="bottomLine" height="30" colspan="3">
-                        <span class="largeSize">
-							<strong>Zachary&nbsp;Qin</strong>
-						</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="50%">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tbody>
-                                <tr>
-                                    <td height="26" colspan="4">
-                                        <span class="myBlue">
-											<b>8 years work experience</b>
-										</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="15%" height="20">Residency:</td>
-                                    <td width="42%" height="20">Melbourne</td>
-                                </tr>
-                                <tr>
-                                    <td height="20">Mobile:</td>
-                                    <td height="20" colspan="3">+61 0412871649</td>
-                                </tr>
-                                <tr>
-                                    <td height="20">E-mail:</td>
-                                    <td height="20" colspan="3"><a href="mailto:zach.qin@gmail.com" class="myBlue">zach.qin@gmail.com</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                    <td>
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tbody>
-                                <tr>
-                                    <td height="26" colspan="4">
-                                        <span class="myBlue">
-											<b class="hide">Education</b>
-										</span>
-                                    </td>
-                                </tr>
-                                <tr>
-		                            <td width="23%">Degree:</td>
-		                            <td>Bachelor</td>
-		                        </tr>
-		                        <tr>
-		                            <td>Major:</td>
-		                            <td>Network Engineering</td>
-		                        </tr>
-		                        <tr>
-		                            <td height="22">School:</td>
-		                            <td>Hunan University of Science and Technology</td>
-		                        </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-		
+        <div class="responsive-header">
+            <div class="bottomLine name">
+                <strong>Zachary&nbsp;Chin</strong>
+            </div>
+            <div class="experience arial"> 
+                <b>8 years work experience</b>
+            </div>
+            <div class="row">
+                <div class="col-6 col-s-6 my-table">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td width="25%">Residency:</td>
+                                <td>Melbourne</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile:</td>
+                                <td colspan="3">+61 0412871649</td>
+                            </tr>
+                            <tr>
+                                <td>E-mail:</td>
+                                <td colspan="3"><a href="mailto:zach.qin@gmail.com" class="myBlue">zach.qin@gmail.com</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-6 col-s-6 my-table">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td width="25%">Degree:</td>
+                                <td>Bachelor</td>
+                            </tr>
+                            <tr>
+                                <td>Major:</td>
+                                <td>Network Engineering</td>
+                            </tr>
+                            <tr>
+                                <td>School:</td>
+                                <td>Hunan University of Science and Technology</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 		<table class="hide paddingLeft" width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
 		    <tbody>
                 <tr>
@@ -229,7 +325,7 @@
             </tbody>
         </table>
         <hr width="100%" color=#93B0ED SIZE=2>
-        <table class="experience" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
+        <table class="work-experience" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
                     <td align="left" valign="middle" class="cvtitle"><strong>Work Experience</strong></td>
@@ -499,30 +595,19 @@
             </tbody>
         </table>
         <hr width="100%" color=#93B0ED SIZE=2>
-        <table class="education" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td align="left" valign="middle" class="cvtitle">Education</td>
-                </tr>
-                <tr>
-                    <td height="5" align="left" valign="middle"></td>
-                </tr>
-                <tr>
-                    <td align="left" valign="middle">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_set">
-                            <tbody>
-                                <tr>
-                                    <td width="15%" class="text_left">2006/9--2010/9</td>
-                                    <td width="40%" class="text">Hunan University of Science and Technology</td>
-                                    <td width="20%" class="text">Network Engineering</td>
-                                    <td class="text">Bachelor</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="row" style="width: 97%; margin: 0 auto;">  
+            <div class="arial cvtitle">
+                <b>Education</b>
+            </div>
+            <div class="col-6 col-s-6 arial" style="padding: 0">
+                <span>2006/9--2010/9</span>
+                <span style="margin-left: 10px;">Hunan University of Science and Technology</span>
+            </div>
+            <div class="col-6 col-s-6 arial" style="padding: 0">
+                <span>Network Engineering</span>
+                <span style="margin-left: 10px;">Bachelor degree</span>
+            </div>
+        </div>
         <table class="certification" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
@@ -538,10 +623,10 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_set">
                             <tbody>
                                 <tr>
-                                    <td width="10%" class="text_left">2014/10</td>
+                                    <td width="15%" class="text_left">2014/10</td>
                                     <td width="20%" class="text">IELTS</td>
                                     <td width="10%" class="text">score:<span class="textpadding">6</span></td>
-                                    <td width="40%" class="text"></td>
+                                    <td width="" class="text"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -552,10 +637,10 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_set">
                             <tbody>
                                 <tr>
-                                    <td width="10%" class="text_left">2017/07</td>
+                                    <td width="15%" class="text_left">2017/07</td>
                                     <td width="20%" class="text">PTE</td>
                                     <td width="10%" class="text">score:<span class="textpadding">71</span></td>
-                                    <td width="40%" class="text">(equivalent to 7 in IELTS)</td>
+                                    <td width="" class="text">(equivalent to 7 in IELTS)</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -566,10 +651,10 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_set">
                             <tbody>
                                 <tr>
-                                    <td width="10%" class="text_left">2017/11</td>
-                                    <td width="20%" class="text">NAATI Interpreter</td>
-                                    <td width="10%" class="text">Distinction</td>
-                                    <td width="40%" class="text"></td>
+                                    <td width="15%" class="text_left">2017/11</td>
+                                    <td width="30%" class="text">NAATI Interpreter</td>
+                                    <td width="20%" class="text">Distinction</td>
+                                    <td width="" class="text"></td>
                                 </tr>
                             </tbody>
                         </table>
