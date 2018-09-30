@@ -13,6 +13,7 @@
         display: table;
     }
 
+    /* For mobile phones: */
     [class*="col-"] {
         float: left;
         padding: 15px;
@@ -20,6 +21,7 @@
     }
 
     @media only screen and (min-width: 600px) {
+        /* For tablets: */
         .col-s-1 {
             width: 8.33%;
         }
@@ -56,9 +58,13 @@
         .col-s-12 {
             width: 100%;
         }
+        .my-education{
+            text-align: center;
+        }
     }
 
     @media only screen and (min-width: 768px) {
+        /* For desktop: */
         .col-1 {
             width: 8.33%;
         }
@@ -94,6 +100,9 @@
         }
         .col-12 {
             width: 100%;
+        }
+        .my-education{
+            text-align: center;
         }
     }
     .outer {
@@ -187,6 +196,13 @@
     }
     .my-table{
         padding: 0;
+    }
+    .my-education{
+        padding: 0; 
+    }
+    .my-education-row{
+        width: 97%; 
+        margin: 0 auto;
     }
     </style>
 </head>
@@ -595,17 +611,21 @@
             </tbody>
         </table>
         <hr width="100%" color=#93B0ED SIZE=2>
-        <div class="row" style="width: 97%; margin: 0 auto;">  
+        <div class="row my-education-row">  
             <div class="arial cvtitle">
                 <b>Education</b>
             </div>
-            <div class="col-6 col-s-6 arial" style="padding: 0">
+            <div class="col-2 col-s-2 arial" style="padding: 0; text-align: left;">
                 <span>2006/9--2010/9</span>
-                <span style="margin-left: 10px;">Hunan University of Science and Technology</span>
             </div>
-            <div class="col-6 col-s-6 arial" style="padding: 0">
+            <div class="col-4 col-s-5 arial my-education">
+                <span>Hunan University of Science and Technology</span>
+            </div>
+            <div class="col-3 col-s-3 arial my-education">
                 <span>Network Engineering</span>
-                <span style="margin-left: 10px;">Bachelor degree</span>
+            </div>
+            <div class="col-3 col-s-2 arial my-education">
+                <span>Bachelor degree</span>
             </div>
         </div>
         <table class="certification" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
