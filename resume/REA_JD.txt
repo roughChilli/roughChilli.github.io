@@ -1,0 +1,64 @@
+https://reagroup.wd3.myworkdayjobs.com/en-US/reacareers/job/Richmond-Melbourne-VIC/Mobile-Developer_R0002525
+
+Richmond, Melbourne VIC
+ABOUT THE ROLE
+
+The REA Group’s strategy is to change the way the world experiences property. Our mobile teams play an important role in that strategy by developing, maintaining and improving the realestate.com.au native apps which are used by millions of Australians every month. Our mobile teams also provide mobile development leadership and support to the broader organisation, including domestic and international products and brands. To be able to deliver the best consumer experiences at scale in the most efficient and technically sustainable way, we believe that mobile-oriented service architectures are vital to our continuing success. In this role, you will work as a member of the native mobile teams, designing, developing and maintaining these mobile apps and services.
+
+WHAT YOU’LL BE DOING
+
+As a member of the Mobile team you will be:
+
+Designing and building the realestate.com.au native Android application and shipping it frequently to our millions of consumers
+Working with product managers, designers and other Android, iOS and back-end developers
+Keeping abreast of the latest mobile technology advances to inform our product and technical designs
+Automating our build and deployment processes to optimise for quality and speed to market
+Contributing to the continuous improvement of products, technology, process and team development
+Actively developing your skills and experience through continual learning and development
+WHAT WE’RE AFTER
+
+If you have built great Android apps from idea to Play Store before, we would love to talk to you. Some experience with Kotlin will be highly valued as we use Kotlin for our new features. Deep understanding of Android design principles and user interface development skills including animation-based UI are also valued. If you are interested in other technologies. We can provide a collaborative team environment that will support your learning other skills beyond of Android such as iOS application, mobile-oriented backend and web development.
+
+At REA we value a diversity of backgrounds and experiences; we are looking for people who have:
+
+A passion for learning and continual improvement
+The ability to communicate effectively
+Empathy, consideration and advocacy for consumers and customers
+Passion for innovative native mobile development and technology
+The ability to work well in autonomous, cross-functional agile teams
+WHAT IT IS LIKE TO WORK WITH US
+
+Each team has around 10 people who collectively represent technology, business, and product and work together to maintain existing products while building new capabilities for the business. Each day we get together, talk about what we've just done, what we're about to do then work together during the day. We believe strongly in pairing, testing, continuous delivery. Each week we participate in guilds across the company to keep our skills sharp and increase our impact, and in team retrospectives where we keep track of how our team is going. Your manager acts as a mentor to help guide you and your career, instead of being someone who monitors your day to day.
+
+WHAT YOU GET BEYOND A GREAT REMUNERATION PACKAGE
+
+We are extremely proud of our parental leave policy. We value mothers and fathers on our teams, and we have a great approach for supporting our people and their family needs. We also provide:
+
+Flexible working arrangements
+Onsite health and wellbeing programs, including bike racks, yoga, meditation classes and weekly massages
+A day off for volunteer leave, to ensure you have the opportunity to give back to your community
+An Employee Community Grants program to show you that we care about your community just as much as you do
+3 days every 4 months in our regular hackathon – See http://hackday.realestate.com.au
+REA even treats you on your birthday by giving you a day off!
+             
+
+ABOUT REA GROUP
+
+We are an Australian-based digital media company with a passion for real estate.
+
+Our leading brand is Australia’s biggest property resource, realestate.com.au. We also operate the number one commercial property site, realcommercial.com.au, and have businesses that help property developers and other brands advertise with us. Whilst we live in Australia, we’ve also got ventures in Asia, Europe and North America, and have the vision of expanding our footprint further. Everything we do is driven by our purpose to ‘change the way the world experiences property’ – from product innovation to our international investments.
+
+We're committed to creating inclusive, safe environments where anyone, no matter their background, can contribute and succeed.
+
+
+
+
+
+
+1.Designing and building frequently
+2.Working with product managers, designers and other Android, iOS and back-end developers: communicate effectively
+work well in autonomous, cross-functional agile teams
+3.Keeping abreast of the latest mobile technology
+4.optimize for quality and speed
+5.continuous improvement of products, continual learning and development
+6.Kotlin，Android 组件，动画，单元测试等等，
