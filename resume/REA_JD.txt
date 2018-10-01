@@ -53,12 +53,25 @@ We're committed to creating inclusive, safe environments where anyone, no matter
 
 
 
+Situation, Action, Outcome
 
+1.Designing and building the realestate.com.au native Android application and shipping it frequently to our millions of consumers
 
-1.Designing and building frequently
-2.Working with product managers, designers and other Android, iOS and back-end developers: communicate effectively
+I have working experience on large scale application development, Express100 is the largest Chinese express and logistic service platform. It has more than 600K daily active users and 20M registered users in 2015. We publish new version biweekly, addressing user concerns and providing new features. My previous experience can give me 
+
+2.Working with product managers, designers and other Android, iOS and back-end developers, communicate effectively
 work well in autonomous, cross-functional agile teams
+
+
 3.Keeping abreast of the latest mobile technology
 4.optimize for quality and speed
 5.continuous improvement of products, continual learning and development
+
+
 6.Kotlin，Android 组件，动画，单元测试等等，
+
+I know little about Kotlin, but I am a fast-learner and quite interested by this first-class android development language, I can master this language in 2 weeks, as I learned many languages, framework in a efficient way. In terms of android components, animation and unit test.
+
+
+
+
