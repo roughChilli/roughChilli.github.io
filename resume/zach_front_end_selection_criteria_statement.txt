@@ -42,3 +42,8 @@ I have a lot of hybrid development experience, including Ionic and React Native.
 
 I have experience working with AWS, especially EC2, RDS and Elastic Beanstalk, in addition, I am quite familiar with Linux and Linux-like system, as before I have 2 years work experience as a back end developer.
 
+
+
+
+
+
