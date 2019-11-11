@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./recorder.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/wavesurfer.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        .flex_center{
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .outerborder{
+            margin: 10px 0px;
+            padding-bottom: 40px;
+        }
+        .cls_head{
+            width:100%; 
+            height: 42px; 
+            margin: 8px;
+            position: relative;    
+        }
+        .cls_head_btn{
+            left: 0; 
+            position: absolute; 
+            height: 100%;
+            width: 52px;
+        }
+        .panel i.glyphicon{
+            font-size: 25px;
+        }
+        .cls_inline{
+            display: inline-block;
+        }
+        .cls_inner_text{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .cls_inner_text_small{
+            font-size: 23px;
+            font-weight: bold;
+        }
+        #recordingslist audio{
+            float: left;
+            margin-right: 10px;
+        }
+        .wf{
+            clear: both;
+        }
+        .cls_left_10{
+            margin-left: 10px
+        }
+
+        #recordingslist > div{
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div_outer_most" class="flex_center">
+        <div class="container">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="cls_head" style="margin-top: 22px">
+                        <button id="id_guide_btn"  type="button" class="btn btn-danger cls_head_btn">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                        <div id="id_guide" class="cls_inline cls_inner_text" style="margin-left: 80px;">Read aloud</div>
+                    </div>  
+                </div>
+                
+                <div class="panel-body">
+                    <legend>
+                        <a href="index.php?name=sound-sample&amp;route=index.Page" target="_blank" class="btn btn-sm btn-default pull-right">音波图形样本</a>
+                        <button class="btn btn-sm btn-default pull-right" type="button" onclick="responsiveVoice.speak($(this).attr('data-text'));" data-text="Global warming is deﬁned as an increase in the average temperature of the earth's atmosphere.">机器朗读</button>
+                    正在计时
+                    </legend>           
+                    <div class="col-lg-12 col-md-12">
+                        <div>
+                            Sometimes the location of the television set can aid the problem of control. A location in a far corner of the house where the set cannot be flicked on as soon as someone comes home and where it is out of range of the refrigerator seems to limit television viewing. Carrying this to the extreme, some families have been known to keep their portable TV set in a closet, and the effort to bring it out into a room can discourage casual viewing. When a worthwhile program is scheduled, out comes the set, and the family watches together. This approach has merit because it keeps TV watching from becoming a habit. Television viewing should have a beginning and an end, like playing a game or seeing a movie. A portable TV can be put away just as a book is put away when it is finished.
+                        </div>
+                        <div style="text-align: center; vertical-align: middle;">
+                            <label id="id_tip" style="margin-right: 20px;">
+                                请准备
+                            </label>
+                            <div style="display: inline-block;">
+                                <h3 id="id_timer"><em>##:##</em></h3>
+                            </div>
+                        </div>
+                        <div class="" style="text-align: center">
+                            <button id="id_start_now" class="btn btn-primary">
+                                立即开始
+                            </button>
+                            <button id="id_start_again" class="btn btn-primary">
+                                重新开始
+                            </button>
+                            <button id="id_stop" class="btn btn-primary">
+                                停止
+                            </button>
+                            <button class="btn btn-primary" onclick="console.log(3)">
+                                随机练习
+                            </button>
+                            <button class="btn btn-primary" onclick="return location.href = '<?php echo $next_link ?>';">
+                                下一个练习
+                            </button>
+                            <label>跳转到： </label>
+                            <select style="padding:5px;" onchange="this.form.index.value=this.value; console.log(this.value);//this.form.submit();">
+                                <option value="42">43</option>
+                                <option value="43">44</option>
+                                <option value="44">45</option>
+                                <option value="45">46</option>
+                                <option value="46" selected="">47</option>
+                                <option value="47">48</option>
+                                <option value="66">67</option>
+                            </select>
+                        </div>
+                        <blockquote style="font-size:12px;">提示： 考试时大约为50-60个词。这里有些材料过长（70-80词），40秒内读不完大家不要有心理负担，把它们作为快速朗读练习即可。2行的材料尽可能在25秒内完成，2行半的尽可能在30秒内完成。<br><br>
+                        当录音完毕后，可以点击“保存”按钮上传到服务器中。上传时选中“公开录音”选项，可以在其他人练习到相同题目时看到已公开的所有其他人的录音。已保存的录音可以在顶部右侧的下拉菜单“
+                            <a href="index.php?route=user.myWorks">我的存档</a>”中找到。
+                        </blockquote>
+                    </div>
+                    
+                    <div>
+                        <h2>Recordings</h2>
+                        <div id="recordingslist"></div>
+                    </div>
+                    <div>
+                        <h2>Log</h2>
+                        <pre id="log"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function __log(e, data) {
+            log.innerHTML += "\n" + e + " " + (data || '');
+        }
+        var audio_context;
+        var recorder, isRecording = false;
+        function startUserMedia(stream) {
+            var input = audio_context.createMediaStreamSource(stream);
+            __log('Media stream created.');
+            // Uncomment if you want the audio to feedback directly
+            //input.connect(audio_context.destination);
+            //__log('Input connected to audio context destination.');
+            
+            recorder = new Recorder(input);
+            __log('Recorder initialised.');
+        }
+        function startRecording() {
+            isRecording = true;
+            recorder && recorder.record();
+            __log('Recording...');
+        }
+        function stopRecording(cb) {
+            isRecording = false;
+            recorder && recorder.stop();
+            __log('Stopped recording.');
+            cb();
+            recorder.clear();
+        }
+        var idx = 0;
+        window.onload = function init() {
+            try {
+              // webkit shim
+              window.AudioContext = window.AudioContext || window.webkitAudioContext;
+              navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+              window.URL = window.URL || window.webkitURL;
+              
+              audio_context = new AudioContext;
+              __log('Audio context set up.');
+              __log('navigator.getUserMedia ' + (navigator.getUserMedia ? 'available.' : 'not present!'));
+            } catch (e) {
+              alert('No web audio support in this browser!');
+            }
+            
+            navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
+              __log('No live audio input: ' + e);
+            });
+        };
+
+
+        jQuery(function ($) {
+            var myTimer, mDuration = 40, mPrepareDuration = 3, display = $("#id_timer");
+
+            var startTimer = function (duration, display, cbBefore, cbAfter) {
+                var timer = duration, minutes, seconds;
+                var changeTag = function(){
+                    minutes = parseInt(timer / 60, 10);
+                    seconds = parseInt(timer % 60, 10);
+
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    display.text(minutes + ":" + seconds);
+                }
+
+                if(cbBefore){
+                    cbBefore();
+                }
+                changeTag();
+                myTimer = setInterval(function () {
+                    --timer;
+                    changeTag();
+                    if (timer <= 0) {
+                        clearInterval(myTimer);
+                        if(cbAfter){
+                            cbAfter();    
+                        }
+                    }
+                }, 1000);
+            }
+
+            var luyin = function(){
+                startTimer(mDuration, display, function(){
+                    $("#id_tip").text("开始录音");
+                    startRecording(this);
+                }, function(){
+                    $("#id_tip").text("录音结束");
+                    $("#id_start_now").prop("disabled", false);
+                    $("#id_start_again").prop("disabled", false);
+                    $("#id_stop").prop("disabled", false);
+                    stopRecording(function(){
+                        createDownloadLink();
+                    });
+                });
+            }
+
+            var start3Seconds = function(){
+                startTimer(mPrepareDuration, display, function(){
+                    $("#id_tip").text("请准备");
+                }, function(){
+                    console.log("3秒播放完成");
+                    luyin();
+                });
+            }
+
+            startTimer(mDuration, display, function(){
+
+            }, function(){
+                luyin();
+            });
+
+            var $w = 0;
+            var showWave = function(ctx,d){
+                var wav = $('div.wf', ctx.parentNode);
+                if( !wav.length ){
+                    var id = 'wav_'+(++$w);
+                    wav = $(ctx.parentNode).append('<div class="wf" id="'+id+'"></div>');
+                    var txt = $(ctx).html();
+                    $(ctx).html('正在加载并绘制声音波形图');
+                    var ws = WaveSurfer.create({ container: '#'+id, waveColor: 'violet', progressColor: 'purple', scrollParent: true, fillParent: false}); 
+                    ws.on('ready', function () { $(ctx).html(txt); });
+                    var audio = $('audio', ctx.parentNode);
+                    audio.on('timeupdate', function(){
+                        var wt = parseFloat(ws.getCurrentTime())||0;
+                        var at = parseFloat(this.currentTime)||0;
+                        ws.skip( at-wt );
+                    });
+                    ws.load(d || audio.attr('src'));
+                    wav.show();
+
+                    id = "slider"+$w;
+                    wav.append('<input class="sl" id="'+id+'" type="range" min="1" max="200" value="1" style="width: 50%" />');
+                    var slider = $("#"+id);
+                    slider[0].oninput = function () {
+                      var zoomLevel = Number(this.value);
+                      ws.zoom(zoomLevel);
+                    };
+                }else{
+                    wav.toggle();
+                    $(ctx.parentNode.querySelector("input")).toggle();
+                }
+                return false;
+            }
+
+            var createDownloadLink = function createDownloadLink() {
+                idx++;
+                recorder && recorder.exportWAV(function(blob) {
+                    var newWavesurfer;
+                    var url = URL.createObjectURL(blob);
+                    var dv = document.createElement('div');
+                    var au = document.createElement('audio');
+                    var mDownload = document.createElement('a');
+                    var mWave = document.createElement('a');
+                    var mUpload = document.createElement('a');
+                    var mDelete = document.createElement('a');
+
+                    au.controls = true;
+                    au.src = url;
+
+                    mDownload.href = url;
+                    mDownload.className += " btn btn-sm btn-default";
+                    mDownload.download = new Date().toISOString() + '.wav';
+                    mDownload.innerHTML = "下载";
+                    mWave.className += " btn btn-sm btn-success cls_left_10";
+                    mWave.innerHTML = "音波";
+                    mWave.id = "btn"+idx;
+                    mUpload.className += " btn btn-sm btn-primary cls_left_10";
+                    mUpload.innerHTML = "上传";
+                    mUpload.id = "upload"+idx;
+                    mDelete.className += " btn btn-sm btn-danger cls_left_10";
+                    mDelete.innerHTML = "删除";
+                    mDelete.id = "upload"+idx;
+
+                    dv.appendChild(au);
+                    dv.appendChild(mDownload);
+                    dv.appendChild(mWave);
+                    dv.appendChild(mUpload);
+                    dv.appendChild(mDelete);
+
+                    // $(dv).append('&nbsp;<a href="#" onclick="return showWave(this);" class="btn btn-sm btn-success">音波</a>&nbsp;<a class="btn btn-sm btn-primary" data-toggle="modal" data-target="#saveModal" onclick="return console.log(123);">保存</a>');
+
+                    mWave.onclick = function(){
+                        showWave(this);
+                    }
+                    mDelete.onclick = function(){
+                        $(this.parentNode).remove();
+                    }
+
+                    recordingslist.appendChild(dv);
+                });
+            }
+
+            $("#id_stop").click(function(){
+                $("#id_tip").text("开始结束");
+                $(this).prop("disabled", true);
+                $("#id_start_now").prop("disabled", false);
+                $("#id_start_again").prop("disabled", false);
+                clearInterval(myTimer);
+                if(isRecording){
+                    stopRecording(function(){
+                        createDownloadLink();
+                    });
+                }
+            });
+            $("#id_start_now").click(function(){
+                $(this).prop("disabled", true);
+                $("#id_stop").prop("disabled", false);
+                $("#id_start_again").prop("disabled", false);
+                clearInterval(myTimer);
+                start3Seconds();
+            });
+            $("#id_start_again").click(function(){
+                $(this).prop("disabled", true);
+                $("#id_stop").prop("disabled", false);
+                $("#id_start_now").prop("disabled", false);
+                clearInterval(myTimer);
+                
+                startTimer(mDuration, display, function(){
+                    $("#id_tip").text("请准备");
+                }, function(){
+                    luyin();
+
+                });
+            });
+        });
+    </script>  
+</body>
+</html>
+
