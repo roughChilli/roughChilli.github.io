@@ -1,791 +1,902 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-        * {
-            box-sizing: border-box;
+      * {
+        box-sizing: border-box;
+      }
+
+      .row:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      /* For mobile phones: */
+      [class*="col-"] {
+        float: left;
+        padding: 15px;
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 600px) {
+        /* For tablets: */
+        .col-s-1 {
+          width: 8.33%;
         }
 
-        .row:after {
-            content: "";
-            clear: both;
-            display: table;
+        .col-s-2 {
+          width: 16.66%;
         }
 
-        /* For mobile phones: */
-        [class*="col-"] {
-            float: left;
-            padding: 15px;
-            width: 100%;
+        .col-s-3 {
+          width: 25%;
         }
 
-        @media only screen and (min-width: 600px) {
-
-            /* For tablets: */
-            .col-s-1 {
-                width: 8.33%;
-            }
-
-            .col-s-2 {
-                width: 16.66%;
-            }
-
-            .col-s-3 {
-                width: 25%;
-            }
-
-            .col-s-4 {
-                width: 33.33%;
-            }
-
-            .col-s-5 {
-                width: 41.66%;
-            }
-
-            .col-s-6 {
-                width: 50%;
-            }
-
-            .col-s-7 {
-                width: 58.33%;
-            }
-
-            .col-s-8 {
-                width: 66.66%;
-            }
-
-            .col-s-9 {
-                width: 75%;
-            }
-
-            .col-s-10 {
-                width: 83.33%;
-            }
-
-            .col-s-11 {
-                width: 91.66%;
-            }
-
-            .col-s-12 {
-                width: 100%;
-            }
-
-            .my-education {
-                text-align: center;
-            }
+        .col-s-4 {
+          width: 33.33%;
         }
 
-        @media only screen and (min-width: 768px) {
-
-            /* For desktop: */
-            .col-1 {
-                width: 8.33%;
-            }
-
-            .col-2 {
-                width: 16.66%;
-            }
-
-            .col-3 {
-                width: 25%;
-            }
-
-            .col-4 {
-                width: 33.33%;
-            }
-
-            .col-5 {
-                width: 41.66%;
-            }
-
-            .col-6 {
-                width: 50%;
-            }
-
-            .col-7 {
-                width: 58.33%;
-            }
-
-            .col-8 {
-                width: 66.66%;
-            }
-
-            .col-9 {
-                width: 75%;
-            }
-
-            .col-10 {
-                width: 83.33%;
-            }
-
-            .col-11 {
-                width: 91.66%;
-            }
-
-            .col-12 {
-                width: 100%;
-            }
-
-            .my-education {
-                text-align: center;
-            }
+        .col-s-5 {
+          width: 41.66%;
         }
 
-        .outer {
-            width: 760px;
-            /*min-width: 350px;*/
-            padding: 0 0 8px 0;
-            margin: 0px auto;
-            border: 2px solid #93B0ED;
+        .col-s-6 {
+          width: 50%;
         }
 
-        @media only screen and (max-width: 1000px) {
-            .outer {
-                width: 100%;
-            }
+        .col-s-7 {
+          width: 58.33%;
         }
 
-        .header {
-            border: #3076BC 1px solid;
-            padding: 8px;
-            background: #F5FAFE;
-            margin: 8px auto;
-            line-height: 22px;
+        .col-s-8 {
+          width: 66.66%;
         }
 
-        .paddingLeft {
-            margin: 8px auto;
-            line-height: 22px;
-            padding: 0 0 0 8px;
+        .col-s-9 {
+          width: 75%;
         }
 
-        .bottomLine {
-            border-bottom: #88b4e0 1px dashed;
+        .col-s-10 {
+          width: 83.33%;
         }
 
-        .largeSize {
-            font-size: 25px;
-            line-height: 30px;
+        .col-s-11 {
+          width: 91.66%;
         }
 
-        td {
-            font-size: 12px;
-            line-height: 160%;
-            font-family: arial, "ˎ̥";
-        }
-
-        .cvtitle {
-            font-weight: 700;
-            color: #256fb8;
-            font-size: 14px !important;
-            padding-top: 5px;
-        }
-
-        .textpadding {
-            padding-left: 5px;
-        }
-
-        .myBlue {
-            color: #256fb8;
-        }
-
-        .myGray {
-            color: #676767;
-        }
-
-        .hide {
-            display: none;
-        }
-
-        .responsive-header {
-            width: 97%;
-            border: #3076BC 1px solid;
-            padding: 8px;
-            background: #F5FAFE;
-            margin: 8px auto;
-            line-height: 22px;
-        }
-
-        .experience {
-            margin: 5px 0;
-            color: #256fb8;
-        }
-
-        .name {
-            font-size: 25px;
-            line-height: 30px;
-            font-family: arial, "ˎ̥";
-        }
-
-        .arial {
-            font-size: 12px;
-            line-height: 150%;
-            font-family: arial, "ˎ̥";
-        }
-
-        .my-table {
-            padding: 0;
+        .col-s-12 {
+          width: 100%;
         }
 
         .my-education {
-            padding: 0;
+          text-align: center;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {
+          width: 8.33%;
         }
 
-        .my-education-row {
-            width: 97%;
-            margin: 0 auto;
+        .col-2 {
+          width: 16.66%;
         }
 
-        .my-education-year {
-            padding: 0;
-            text-align: left;
+        .col-3 {
+          width: 25%;
         }
 
-        .my-bold {
-            font-weight: 600;
+        .col-4 {
+          width: 33.33%;
         }
 
-        .text-middle {
-            text-align: center;
+        .col-5 {
+          width: 41.66%;
         }
 
-        .margin-top {
-            margin-top: 10px;
+        .col-6 {
+          width: 50%;
         }
 
-        .margin-left {
-            margin-left: 5px;
+        .col-7 {
+          width: 58.33%;
         }
+
+        .col-8 {
+          width: 66.66%;
+        }
+
+        .col-9 {
+          width: 75%;
+        }
+
+        .col-10 {
+          width: 83.33%;
+        }
+
+        .col-11 {
+          width: 91.66%;
+        }
+
+        .col-12 {
+          width: 100%;
+        }
+
+        .my-education {
+          text-align: center;
+        }
+      }
+
+      .outer {
+        width: 760px;
+        /*min-width: 350px;*/
+        padding: 0 0 8px 0;
+        margin: 0px auto;
+        border: 2px solid #93b0ed;
+      }
+
+      @media only screen and (max-width: 1000px) {
+        .outer {
+          width: 100%;
+        }
+      }
+
+      .header {
+        border: #3076bc 1px solid;
+        padding: 8px;
+        background: #f5fafe;
+        margin: 8px auto;
+        line-height: 22px;
+      }
+
+      .paddingLeft {
+        margin: 8px auto;
+        line-height: 22px;
+        padding: 0 0 0 8px;
+      }
+
+      .bottomLine {
+        border-bottom: #88b4e0 1px dashed;
+      }
+
+      .largeSize {
+        font-size: 25px;
+        line-height: 30px;
+      }
+
+      td {
+        font-size: 12px;
+        line-height: 160%;
+        font-family: arial, "ˎ̥";
+      }
+
+      .cvtitle {
+        font-weight: 700;
+        color: #256fb8;
+        font-size: 14px !important;
+        padding-top: 5px;
+      }
+
+      .textpadding {
+        padding-left: 5px;
+      }
+
+      .myBlue {
+        color: #256fb8;
+      }
+
+      .myGray {
+        color: #676767;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .responsive-header {
+        width: 97%;
+        border: #3076bc 1px solid;
+        padding: 8px;
+        background: #f5fafe;
+        margin: 8px auto;
+        line-height: 22px;
+      }
+
+      .experience {
+        margin: 5px 0;
+        color: #256fb8;
+      }
+
+      .name {
+        font-size: 25px;
+        line-height: 30px;
+        font-family: arial, "ˎ̥";
+      }
+
+      .arial {
+        font-size: 12px;
+        line-height: 150%;
+        font-family: arial, "ˎ̥";
+      }
+
+      .my-table {
+        padding: 0;
+      }
+
+      .my-education {
+        padding: 0;
+      }
+
+      .my-education-row {
+        width: 97%;
+        margin: 0 auto;
+      }
+
+      .my-education-year {
+        padding: 0;
+        text-align: left;
+      }
+
+      .my-bold {
+        font-weight: 600;
+      }
+
+      .text-middle {
+        text-align: center;
+      }
+
+      .margin-top {
+        margin-top: 10px;
+      }
+
+      .margin-left {
+        margin-left: 5px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="outer">
-        <div class="responsive-header">
-            <div class="bottomLine name">
-                <strong>Zachary&nbsp;Qin</strong>
-            </div>
-            <div class="experience arial">
-                <b>14 years of IT experience</b>
-            </div>
-            <div class="row">
-                <div class="col-6 col-s-6 my-table">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                            <tr>
-                                <td width="25%">Residency:</td>
-                                <td>Melbourne</td>
-                            </tr>
-                            <tr>
-                                <td>Mobile:</td>
-                                <td colspan="3">+61 0412871649</td>
-                            </tr>
-                            <tr>
-                                <td>E-mail:</td>
-                                <td colspan="3"><a href="mailto:zach.qin@gmail.com"
-                                        class="myBlue">zach.qin@gmail.com</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-6 col-s-6 my-table">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                            <tr>
-                                <td width="25%">Degree:</td>
-                                <td>Bachelor</td>
-                            </tr>
-                            <tr>
-                                <td>Major:</td>
-                                <td>Network Engineering</td>
-                            </tr>
-                            <tr>
-                                <td>University:</td>
-                                <td>Hunan University of Science and Technology</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+      <div class="responsive-header">
+        <div class="bottomLine name">
+          <strong>Zachary&nbsp;Qin</strong>
         </div>
-        <hr width="100%" color=#93B0ED SIZE=2>
-        <table class="profile" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
-            <tbody>
+        <div class="experience arial">
+          <b>14 years of software development experience</b>
+        </div>
+        <div class="row">
+          <div class="col-6 col-s-6 my-table">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
                 <tr>
-                    <td align="left" valign="middle" class="cvtitle">Profile</td>
+                  <td width="25%">Residency:</td>
+                  <td>Melbourne</td>
                 </tr>
                 <tr>
-                    <td height="5" align="left" valign="middle"></td>
+                  <td>Mobile:</td>
+                  <td colspan="3">+61 0412871649</td>
                 </tr>
                 <tr>
-                    <td class="Cur_Val" align="left" valign="middle">
-                        Optimistic, self-initiative, and high teamwork spirit.
-                        <br>Diligent and able to work under pressure.
-                    </td>
+                  <td>E-mail:</td>
+                  <td colspan="3">
+                    <a href="mailto:zach.qin@gmail.com" class="myBlue"
+                      >zach.qin@gmail.com</a
+                    >
+                  </td>
                 </tr>
-            </tbody>
-        </table>
-        <table class="stack" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
-            <tbody>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-6 col-s-6 my-table">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
                 <tr>
-                    <td class="cvtitle" valign="center" align="left">IT Skills</td>
-                </tr>
-                <tr>
-                    <td valign="center" align="left" height="5"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <span>Skilled in React, React Native, ES6, SQL, Bootstrap, Ant Design, GraphQL, Node.js,
-                            and Android Native development.</span>
-                    </td>
+                  <td width="25%">Degree:</td>
+                  <td>Bachelor</td>
                 </tr>
                 <tr>
-                    <td>
-                        <span>I'm an avid user of GitHub, Bitbucket, and JIRA, actively engaged in CI/CD pipelines and
-                            Agile methodologies. Possess a strong grasp of both application and backend
-                            architectures.</span>
-                    </td>
+                  <td>Major:</td>
+                  <td>Network Engineering</td>
                 </tr>
                 <tr>
-                    <td>
-                        <span>My expertise extends to cloud platforms like GCP, AWS, and Terraform, where I am
-                            proficient in utilizing services such as Cognito, EC2, S3, Lambda, SNS, Amazon Rekognition,
-                            API Gateway, and Certificate Manager.</span>
-                    </td>
+                  <td>University:</td>
+                  <td>Hunan University of Science and Technology</td>
                 </tr>
-            </tbody>
-        </table>
-        <hr width="100%" color=#93B0ED SIZE=2>
-        <table class="work-experience" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td align="left" valign="middle" class="cvtitle"><strong>Work Experience</strong></td>
-                </tr>
-                <tr>
-                    <td height="5" align="left" valign="middle"></td>
-                </tr>
-                <tr>
-                    <td align="left" valign="middle">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_set">
-                            <tbody>
-                                <!-- add more experience -->
-                                <tr>
-                                    <td>2023/07--present:&nbsp;<b>Chemist Warehouse</b></td>
-                                    <td><b>Senior Full Stack Developer</b></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="Cur_Val">
-                                        <span>As a senior full stack developer at Chemist Warehouse, I played a pivotal
-                                            role in two different teams and projects:
-                                        </span>
-                                        <br>
-                                        <div class="margin-left">
-                                            <b>Order Fulfillment Team: </b>Modernizing Order Fulfillment App using
-                                            Electron.
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <hr width="100%" color="#93B0ED" size="2" />
+      <table
+        class="profile"
+        width="97%"
+        border="0"
+        align="center"
+        cellspacing="0"
+        cellpadding="0"
+      >
+        <tbody>
+          <tr>
+            <td align="left" valign="middle" class="cvtitle">Profile</td>
+          </tr>
+          <tr>
+            <td height="5" align="left" valign="middle"></td>
+          </tr>
+          <tr>
+            <td class="Cur_Val" align="left" valign="middle">
+              Optimistic, self-initiative, and high teamwork spirit.
+              <br />Diligent and able to work under pressure.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table
+        class="stack"
+        width="97%"
+        border="0"
+        align="center"
+        cellspacing="0"
+        cellpadding="0"
+      >
+        <tbody>
+          <tr>
+            <td class="cvtitle" valign="center" align="left">IT Skills</td>
+          </tr>
+          <tr>
+            <td valign="center" align="left" height="5"></td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                >Skilled in React, React Native, ES6, SQL, Bootstrap, Ant
+                Design, GraphQL, Node.js, and Android Native development.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                >I'm an avid user of GitHub, Bitbucket, and JIRA, actively
+                engaged in CI/CD pipelines and Agile methodologies. Possess a
+                strong grasp of both application and backend
+                architectures.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                >My expertise extends to cloud platforms like GCP, AWS, and
+                Terraform, where I am proficient in utilizing services such as
+                Cognito, EC2, S3, Lambda, SNS, Amazon Rekognition, API Gateway,
+                and Certificate Manager.</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr width="100%" color="#93B0ED" size="2" />
+      <table
+        class="work-experience"
+        width="97%"
+        border="0"
+        align="center"
+        cellspacing="0"
+        cellpadding="0"
+      >
+        <tbody>
+          <tr>
+            <td align="left" valign="middle" class="cvtitle">
+              <strong>Work Experience</strong>
+            </td>
+          </tr>
+          <tr>
+            <td height="5" align="left" valign="middle"></td>
+          </tr>
+          <tr>
+            <td align="left" valign="middle">
+              <table
+                width="100%"
+                border="0"
+                cellspacing="0"
+                cellpadding="0"
+                class="table_set"
+              >
+                <tbody>
+                  <!-- add more experience -->
+                  <tr>
+                    <td>2023/07--present:&nbsp;<b>Chemist Warehouse</b></td>
+                    <td><b>Senior Full Stack Developer</b></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="Cur_Val">
+                      <span
+                        >As a senior full stack developer at Chemist Warehouse,
+                        I played a pivotal role in two different teams and
+                        projects:
+                      </span>
+                      <br />
+                      <div class="margin-left">
+                        <b>Order Fulfillment Team: </b>Modernizing Order
+                        Fulfillment App using Electron.
 
-                                            <div>
-                                                1. Spearheaded the adoption of Electron framework to revitalize the
-                                                order
-                                                fulfillment application.
-                                                <br />
-                                                2. Collaborated with cross-functional teams to modernize UI/UX,
-                                                enhancing
-                                                user experience.
-                                                <br />
-                                                3. Conducted code reviews and provided technical guidance to ensure
-                                                high-quality deliverables.
-                                                <br />
-                                                4. Acted as a liaison between development team and stakeholders,
-                                                facilitating effective communication and alignment of objectives.
-                                                <br>
-                                                5. Technology used: <b>Electron, React, Typescript, Material UI,
-                                                    Formik</b>.
-                                            </div>
-                                            <div class="margin-top"><b>Comms MS Team: </b>Developing Communication
-                                                System
-                                                with NestJS and Terraform</div>
-                                            <div>
-                                                1. Take part in the development of a comprehensive communication system
-                                                leveraging NestJS framework.
-                                                <br />
-                                                2. Integrated GitHub CI/CD pipelines to automate build, test, and
-                                                deployment
-                                                processes, ensuring continuous delivery.
-                                                <br />
-                                                3. Orchestrated the implementation of SMS and Email notification
-                                                functionalities, optimizing customer engagement and communication.
-                                                <br />
-                                                4. Managed cloud infrastructure on GCP using Terraform, ensuring
-                                                scalability
-                                                and reliability of the system.
-                                                <br>
-                                                5. Technology used: <b>NestJS, Typescript, GCP, Terraform, GitHub
-                                                    Actions</b>.
-                                            </div>
-                                        </div>
-                                        <div class="margin-top">In both roles, I demonstrated a blend of technical
-                                            expertise, team spirit,
-                                            and communication skills to drive the successful execution of projects
-                                            aligned with organizational goals.</div>
-                                    </td>
-                                </tr>
+                        <div>
+                          1. Spearheaded the adoption of Electron framework to
+                          revitalize the order fulfillment application.
+                          <br />
+                          2. Collaborated with cross-functional teams to
+                          modernize UI/UX, enhancing user experience.
+                          <br />
+                          3. Conducted code reviews and provided technical
+                          guidance to ensure high-quality deliverables.
+                          <br />
+                          4. Acted as a liaison between development team and
+                          stakeholders, facilitating effective communication and
+                          alignment of objectives.
+                          <br />
+                          5. Technology used:
+                          <b>Electron, React, Typescript, Material UI, Formik</b
+                          >.
+                        </div>
+                        <div class="margin-top">
+                          <b>Comms MS Team: </b>Developing Communication System
+                          with NestJS and Terraform
+                        </div>
+                        <div>
+                          1. Take part in the development of a comprehensive
+                          communication system leveraging NestJS framework.
+                          <br />
+                          2. Integrated GitHub CI/CD pipelines to automate
+                          build, test, and deployment processes, ensuring
+                          continuous delivery.
+                          <br />
+                          3. Orchestrated the implementation of SMS and Email
+                          notification functionalities, optimizing customer
+                          engagement and communication.
+                          <br />
+                          4. Managed cloud infrastructure on GCP using
+                          Terraform, ensuring scalability and reliability of the
+                          system.
+                          <br />
+                          5. Technology used:
+                          <b
+                            >NestJS, Typescript, GCP, Terraform, GitHub
+                            Actions</b
+                          >.
+                        </div>
+                      </div>
+                      <div class="margin-top">
+                        In both roles, I demonstrated a blend of technical
+                        expertise, team spirit, and communication skills to
+                        drive the successful execution of projects aligned with
+                        organizational goals.
+                      </div>
+                    </td>
+                  </tr>
 
-                                <tr>
-                                    <td colspan="2" align="center" valign="middle">
-                                        <hr size="1" noshade="noshade">
-                                    </td>
-                                </tr>
-                                <!-- add more experience -->
-                                <!-- add more experience -->
-                                <tr>
-                                    <td>2021/06--2023/06:&nbsp;<b>Hooga</b></td>
-                                    <td><b>Lead Engineer</b></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="Cur_Val">
-                                        <span>HOOGA is an event-sharing app that is using patented geo-location and
-                                            facial recognition technology, making each event its own living,
-                                            breathing social network. I worked as a full-stack software engineer in the
-                                            company, taking charge of the App development and release. My
-                                            duties are as the following:</span>
-                                        <br>
-                                        <div>
-                                            1. Developing and implementing mobile applications using React Native and
-                                            Apollo GraphQL.
-                                            <br />
-                                            2. Collaborating with cross-functional teams, to develop features and
-                                            resolve issues.
-                                            <br />
-                                            3. Writing clean, modular, and maintainable code with best practices.
-                                            <br />
-                                            4. Conducting code reviews and ensuring code quality and consistency across
-                                            the project.
-                                            <br />
-                                            5. Debugging and troubleshooting issues across different mobile platforms.
-                                            <br />
-                                            6. Optimizing mobile application performance and improving user experience.
-                                            <br />
-                                            7. Staying up-to-date with the latest trends and technologies in mobile
-                                            development.
-                                            <br />
-                                            8. Participating in team meetings and contributing to team and company
-                                            culture.
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Links</td>
-                                    <td>
-                                        <b>https://apps.apple.com/au/app/hooga/id1527346417</b>
-                                        <br />
-                                        <b>https://play.google.com/store/apps/details?id=au.com.hooga.app</b>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" align="center" valign="middle">
-                                        <hr size="1" noshade="noshade">
-                                    </td>
-                                </tr>
-                                <!-- add more experience -->
-                                <tr>
-                                    <td colspan="2" class="text_left">2016/10--2022/04:&nbsp;<b>Australia Education
-                                            Management Group</b>
-                                    </td>
-                                </tr>
-                                <tr class="hide">
-                                    <td width="22%" class="text_left">Industry:</td>
-                                    <td width="78%" class="text">Education/Training/Universities and Colleges</td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left">
-                                        <b>IT Dept.</b>
-                                    </td>
-                                    <td class="text">
-                                        <b>Full Stack Software Engineer</b>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="Cur_Val">
-                                        AEMG Education is a leading international educational institution, and
-                                        cooperates with more than 70 education and research institutions around the
-                                        world, helping tens of thousands of students and academics realize life-changing
-                                        achievements.
-                                        <span>I worked as a full-stack senior software engineer in the company, my
-                                            duties are as the following:</span>
-                                        <br>
-                                        <div>
-                                            1. Develop and maintain applications. With expertise in Moodle, Node.js,
-                                            NPM, React, React Native, Redux, Vue, Vue-router, and Vuex.
-                                            <br>2. Expert skills in building full-stack web products using open source
-                                            and cloud technologies that scale and are highly performant.
-                                            <br>3. Expert skills in modern software development techniques such as
-                                            functional programming, object-orientated programming, test-driven
-                                            development, micro-services, and continuous delivery.
-                                            <br>4. Familiar with UI frameworks, like Bootstrap, AntDesign, and Vuetify.
-                                            <br>5. Collaborating closely with product managers, UI designers, and
-                                            backend developers, integrating resources and API provided.
-                                            <br>6. Good user of GitHub, a good understanding of CI/CD, working in an
-                                            Agile way.
-                                            <br>7. Experience with Databases technologies, DevOps tools, and techniques,
-                                            particularly AWS, Docker, and Linux.
-                                            <br>8. Communicate and collaborate effectively with business stakeholders.
-                                            <br>9. Lead the engineering team in a collaborative team environment.
-                                            <br>10. Looks at tricky situations through a solutions-focused lens.
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" align="center" valign="middle">
-                                        <hr size="1" noshade="noshade">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="text_left">2015/4--2016/9:&nbsp;Kingdee Software( China )
-                                        Co., Ltd&nbsp;<span class="hide">(1000-5000 people)</span>
-                                        <span class="hide myGray"><b>[1 year and 5month]</b></span>
-                                    </td>
-                                </tr>
-                                <tr class="hide">
-                                    <td width="22%" class="text_left">Industry:</td>
-                                    <td width="78%" class="text">Computers,Software</td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left">
-                                        <b>Express100</b>
-                                    </td>
-                                    <td class="text">
-                                        <b>Senior Software Engineer</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="Cur_Val">
-                                        Kingdee is a leading software developer, listed on the Hong Kong stock exchange,
-                                        and Express100 is one of the largest express service platforms in Asia, with
-                                        over 20 million registered users and 600,000+ users active daily.
-                                        <br>My job responsibilities include the following:
-                                        <br>1. Responsible for the development of mobile applications and backend
-                                        services.
-                                        <br>2. Completed 2 projects and submitted them to the App Store and Google Play.
-                                        <br>3. Write clean, maintainable, and well-documented code, following coding
-                                        standards and best practices.
-                                        <br>4. Conduct thorough testing of the application, including functional,
-                                        integration, and performance testing.
-                                        <br>5. Troubleshoot and debug issues, providing timely resolutions and
-                                        addressing any technical challenges that may arise.
-                                        <br>6. Stay updated with the latest trends, and technologies, in the full-stack
-                                        development ecosystem.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" align="center" valign="middle">
-                                        <hr size="1" noshade="noshade">
-                                    </td>
-                                </tr>
-                                <!-- add more experience -->
-                                <tr>
-                                    <td colspan="2" class="text_left">2012/11--2015/4:&nbsp;China Information
-                                        Technology,Inc&nbsp;<span class="hide">(100-500 people)</span>
-                                        <span class="hide myGray"><b>[2 year and 5month]</b></span>
-                                    </td>
-                                </tr>
-                                <tr class="hide">
-                                    <td width="22%" class="text_left">Industry:</td>
-                                    <td width="78%" class="text">Computers,Software</td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left">
-                                        <b>Cloud Platform Dept.</b>
-                                    </td>
-                                    <td class="text">
-                                        <b>Software Engineer</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="Cur_Val">
-                                        I am responsible for the development and maintenance of the main product of the
-                                        company, the Android Digital Billboard, which is an advertising digital LCD/LED
-                                        panel with the Android system, with features like video playback, Image display,
-                                        content scheduling, real-time update, remote monitoring, and remote content
-                                        management.
-                                        <br>1. Collaborate with cross-functional teams to gather requirements and
-                                        translate them into technical specifications.
-                                        <br>2. Design and develop the Android application using industry best practices
-                                        and coding standards.
-                                        <br>3. Implement features and functionalities to support video playback, image
-                                        display, and content scheduling as per the provided requirements.
-                                        <br>4. Integrate the app with the backend services, consuming APIs for content
-                                        retrieval, synchronization, and real-time updates.
-                                        <br>5. Optimize the app for performance, reliability, and scalability,
-                                        considering device constraints and network conditions.
-                                        <br>6. Collaborate with UI/UX designers to ensure the app adheres to design
-                                        guidelines and provides an optimal user experience.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" align="center" valign="middle">
-                                        <hr size="1" noshade="noshade">
-                                    </td>
-                                </tr>
-                                <!-- add more experience -->
-                                <tr>
-                                    <td colspan="2" class="text_left">2011/3--2012/7:&nbsp;IBM&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left">
-                                        <b>Command Center</b>
-                                    </td>
-                                    <td class="text">
-                                        <b>Application Developer</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="Cur_Val">
-                                        The IBM Command Center, also known as the IBM Operations Center, is a
-                                        comprehensive solution provided by IBM to monitor and manage complex IT
-                                        environments.
-                                        I worked there with the following duties:
-                                        <br>1. Responsible for ensuring that all System LPAR and z/OS storage are
-                                        reliable, and meeting customer service agreements.
-                                        <br>2. Planned and developed documentation for the implementation of rules and
-                                        activities.
-                                        <br>3. Used error reporting system to diagnose problems and improve quality.
-                                        <br>4. Worked cooperatively with multiple teams in different locations.
-                                        <br>5. 100% success rate and promoted to Blues(senior position).
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                  <tr>
+                    <td colspan="2" align="center" valign="middle">
+                      <hr size="1" noshade="noshade" />
                     </td>
-                </tr>
-            </tbody>
-        </table>
-        <hr width="100%" color=#93B0ED SIZE=2>
-        <table class="project" width="97%" border="0" align="center" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td align="left" valign="middle" class="cvtitle">Project Experience</td>
-                </tr>
-                <tr>
-                    <td height="5" align="left" valign="middle"></td>
-                </tr>
-                <tr>
-                    <td align="left" valign="middle">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_set">
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" class="text_left"><b>Cloud Campus</b></td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left" valign="top">Tools:</td>
-                                    <td class="text">Android Studio, Xcode, MySQL, VS Code, Chrome DevTools</td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left" valign="top">Description:</td>
-                                    <td class="Cur_Val">Cloud Campus is an online learning platform that delivers
-                                        multiple ways of teaching and learning for our cooperative education programs.
-                                        <br>The first version is developed using React Native, technics including React
-                                        Navigation, API, Redux, and Express.js.
-                                        <br>Website:
-                                        <span class="my-bold">https://www.cloudcampus.com.au</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left" valign="top">Responsibility:</td>
-                                    <td class="Cur_Val">
-                                        1. I am taking the lead and playing a highly effective role in the project,
-                                        developing Android and iOS applications independently, and conducting end-to-end
-                                        tests.
-                                        <br>2. The project implemented the whole website functions, based on the web
-                                        service API. In addition, there are other, e.g. notification, download, video
-                                        encryption/decryption, etc.
-                                        <br>3. Published in Apple App Store and Google Play.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left" valign="top">Links:</td>
-                                    <td class="Cur_Val">
-                                        <span
-                                            class="my-bold">https://itunes.apple.com/au/app/cloud-campus/id1170990664?mt=8</span>
-                                        <br><span
-                                            class="my-bold">https://play.google.com/store/apps/details?id=com.aemg.CloudProject</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" align="center" valign="middle">
-                                        <hr size="1" noshade="noshade">
-                                    </td>
-                                </tr>
-                                <!-- add more experience -->
-                                <tr>
-                                    <td colspan="2" class="text_left"><b>Express100</b></td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left" valign="top">Tools:</td>
-                                    <td class="text">Eclipse, Oracle, MongoDB, Node.js, Android Studio, Xcode</td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left" valign="top">Description:</td>
-                                    <td class="Cur_Val">Express100 provides services that include intelligent query,
-                                        delivery status push, courier management, query the delivery time, one-click
-                                        lookup nearby courier, send express online, etc. Express100 is the largest
-                                        Chinese express service platform. Express100 mobile terminal has daily active
-                                        users of more than 600,000 and the cumulative number of registered users is more
-                                        than 20,000,000.</td>
-                                </tr>
-                                <tr>
-                                    <td class="text_left" valign="top">Responsibility:</td>
-                                    <td class="Cur_Val">In charge of two applications development: Express100 and
-                                        Courier100.
-                                        <br>Featured functions:
-                                        <br>1. E-commerce order import.
-                                        <br>2. Mobile phone proxy service.
-                                        <br>3. Search nearby couriers.
-                                        <br>4. Intelligent query expresses information.
-                                        <br>5. Message management.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" align="center" valign="middle">
-                                        <hr size="1" noshade="noshade">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><b>Android Digital Billboard</b></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top">Tools:</td>
-                                    <td class="text">Eclipse, FileZilla, MySQL Workbench</td>
-                                </tr>
-                                <tr>
-                                    <td valign="top">Description:</td>
-                                    <td class="Cur_Val">An Android application with the following features:
-                                        <br>1. Socket communication, according to the company protocol.
-                                        <br>2. FTP download task.
-                                        <br>3. Integrated media functions.
-                                        <br>4. XML Encapsulation and unpack.
-                                        <br>5. Heartbeat to maintain long-lasting communication.
-                                        <br>6. Multi-threaded pool and asynchronous processing.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td valign="top">Responsibility:</td>
-                                    <td class="Cur_Val">Responsible for the software architecture build, UI, and UX
-                                        implementation.
-                                        <br>Implement background communication interaction.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                  </tr>
+                  <!-- add more experience -->
+                  <!-- add more experience -->
+                  <tr>
+                    <td>2021/06--2023/06:&nbsp;<b>Hooga</b></td>
+                    <td><b>Lead Engineer</b></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="Cur_Val">
+                      <span
+                        >HOOGA is an event-sharing app that is using patented
+                        geo-location and facial recognition technology, making
+                        each event its own living, breathing social network. I
+                        worked as a full-stack software engineer in the company,
+                        taking charge of the App development and release. My
+                        duties are as the following:</span
+                      >
+                      <br />
+                      <div>
+                        1. Developing and implementing mobile applications using
+                        React Native and Apollo GraphQL.
+                        <br />
+                        2. Collaborating with cross-functional teams, to develop
+                        features and resolve issues.
+                        <br />
+                        3. Writing clean, modular, and maintainable code with
+                        best practices.
+                        <br />
+                        4. Conducting code reviews and ensuring code quality and
+                        consistency across the project.
+                        <br />
+                        5. Debugging and troubleshooting issues across different
+                        mobile platforms.
+                        <br />
+                        6. Optimizing mobile application performance and
+                        improving user experience.
+                        <br />
+                        7. Staying up-to-date with the latest trends and
+                        technologies in mobile development.
+                        <br />
+                        8. Participating in team meetings and contributing to
+                        team and company culture.
+                      </div>
                     </td>
-                </tr>
-            </tbody>
-        </table>
+                  </tr>
+                  <tr>
+                    <td>Links</td>
+                    <td>
+                      <b>https://apps.apple.com/au/app/hooga/id1527346417</b>
+                      <br />
+                      <b
+                        >https://play.google.com/store/apps/details?id=au.com.hooga.app</b
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="center" valign="middle">
+                      <hr size="1" noshade="noshade" />
+                    </td>
+                  </tr>
+                  <!-- add more experience -->
+                  <tr>
+                    <td colspan="2" class="text_left">
+                      2016/10--2022/04:&nbsp;<b
+                        >Australia Education Management Group</b
+                      >
+                    </td>
+                  </tr>
+                  <tr class="hide">
+                    <td width="22%" class="text_left">Industry:</td>
+                    <td width="78%" class="text">
+                      Education/Training/Universities and Colleges
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text_left">
+                      <b>IT Dept.</b>
+                    </td>
+                    <td class="text">
+                      <b>Full Stack Software Engineer</b>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="Cur_Val">
+                      AEMG Education is a leading international educational
+                      institution, and cooperates with more than 70 education
+                      and research institutions around the world, helping tens
+                      of thousands of students and academics realize
+                      life-changing achievements.
+                      <span
+                        >I worked as a full-stack senior software engineer in
+                        the company, my duties are as the following:</span
+                      >
+                      <br />
+                      <div>
+                        1. Develop and maintain applications. With expertise in
+                        Moodle, Node.js, NPM, React, React Native, Redux, Vue,
+                        Vue-router, and Vuex.
+                        <br />2. Expert skills in building full-stack web
+                        products using open source and cloud technologies that
+                        scale and are highly performant. <br />3. Expert skills
+                        in modern software development techniques such as
+                        functional programming, object-orientated programming,
+                        test-driven development, micro-services, and continuous
+                        delivery. <br />4. Familiar with UI frameworks, like
+                        Bootstrap, AntDesign, and Vuetify. <br />5.
+                        Collaborating closely with product managers, UI
+                        designers, and backend developers, integrating resources
+                        and API provided. <br />6. Good user of GitHub, a good
+                        understanding of CI/CD, working in an Agile way.
+                        <br />7. Experience with Databases technologies, DevOps
+                        tools, and techniques, particularly AWS, Docker, and
+                        Linux. <br />8. Communicate and collaborate effectively
+                        with business stakeholders. <br />9. Lead the
+                        engineering team in a collaborative team environment.
+                        <br />10. Looks at tricky situations through a
+                        solutions-focused lens.
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="center" valign="middle">
+                      <hr size="1" noshade="noshade" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="text_left">
+                      2015/4--2016/9:&nbsp;Kingdee Software( China ) Co.,
+                      Ltd&nbsp;<span class="hide">(1000-5000 people)</span>
+                      <span class="hide myGray"
+                        ><b>[1 year and 5month]</b></span
+                      >
+                    </td>
+                  </tr>
+                  <tr class="hide">
+                    <td width="22%" class="text_left">Industry:</td>
+                    <td width="78%" class="text">Computers,Software</td>
+                  </tr>
+                  <tr>
+                    <td class="text_left">
+                      <b>Express100</b>
+                    </td>
+                    <td class="text">
+                      <b>Senior Software Engineer</b>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="Cur_Val">
+                      Kingdee is a leading software developer, listed on the
+                      Hong Kong stock exchange, and Express100 is one of the
+                      largest express service platforms in Asia, with over 20
+                      million registered users and 600,000+ users active daily.
+                      <br />My job responsibilities include the following:
+                      <br />1. Responsible for the development of mobile
+                      applications and backend services. <br />2. Completed 2
+                      projects and submitted them to the App Store and Google
+                      Play. <br />3. Write clean, maintainable, and
+                      well-documented code, following coding standards and best
+                      practices. <br />4. Conduct thorough testing of the
+                      application, including functional, integration, and
+                      performance testing. <br />5. Troubleshoot and debug
+                      issues, providing timely resolutions and addressing any
+                      technical challenges that may arise. <br />6. Stay updated
+                      with the latest trends, and technologies, in the
+                      full-stack development ecosystem.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="center" valign="middle">
+                      <hr size="1" noshade="noshade" />
+                    </td>
+                  </tr>
+                  <!-- add more experience -->
+                  <tr>
+                    <td colspan="2" class="text_left">
+                      2012/11--2015/4:&nbsp;China Information
+                      Technology,Inc&nbsp;<span class="hide"
+                        >(100-500 people)</span
+                      >
+                      <span class="hide myGray"
+                        ><b>[2 year and 5month]</b></span
+                      >
+                    </td>
+                  </tr>
+                  <tr class="hide">
+                    <td width="22%" class="text_left">Industry:</td>
+                    <td width="78%" class="text">Computers,Software</td>
+                  </tr>
+                  <tr>
+                    <td class="text_left">
+                      <b>Cloud Platform Dept.</b>
+                    </td>
+                    <td class="text">
+                      <b>Software Engineer</b>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="Cur_Val">
+                      I am responsible for the development and maintenance of
+                      the main product of the company, the Android Digital
+                      Billboard, which is an advertising digital LCD/LED panel
+                      with the Android system, with features like video
+                      playback, Image display, content scheduling, real-time
+                      update, remote monitoring, and remote content management.
+                      <br />1. Collaborate with cross-functional teams to gather
+                      requirements and translate them into technical
+                      specifications. <br />2. Design and develop the Android
+                      application using industry best practices and coding
+                      standards. <br />3. Implement features and functionalities
+                      to support video playback, image display, and content
+                      scheduling as per the provided requirements. <br />4.
+                      Integrate the app with the backend services, consuming
+                      APIs for content retrieval, synchronization, and real-time
+                      updates. <br />5. Optimize the app for performance,
+                      reliability, and scalability, considering device
+                      constraints and network conditions. <br />6. Collaborate
+                      with UI/UX designers to ensure the app adheres to design
+                      guidelines and provides an optimal user experience.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="center" valign="middle">
+                      <hr size="1" noshade="noshade" />
+                    </td>
+                  </tr>
+                  <!-- add more experience -->
+                  <tr>
+                    <td colspan="2" class="text_left">
+                      2011/3--2012/7:&nbsp;IBM&nbsp;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text_left">
+                      <b>Command Center</b>
+                    </td>
+                    <td class="text">
+                      <b>Application Developer</b>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="Cur_Val">
+                      The IBM Command Center, also known as the IBM Operations
+                      Center, is a comprehensive solution provided by IBM to
+                      monitor and manage complex IT environments. I worked there
+                      with the following duties:
+                      <br />1. Responsible for ensuring that all System LPAR and
+                      z/OS storage are reliable, and meeting customer service
+                      agreements. <br />2. Planned and developed documentation
+                      for the implementation of rules and activities. <br />3.
+                      Used error reporting system to diagnose problems and
+                      improve quality. <br />4. Worked cooperatively with
+                      multiple teams in different locations. <br />5. 100%
+                      success rate and promoted to Blues(senior position).
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr width="100%" color="#93B0ED" size="2" />
+      <table
+        class="project"
+        width="97%"
+        border="0"
+        align="center"
+        cellspacing="0"
+        cellpadding="0"
+      >
+        <tbody>
+          <tr>
+            <td align="left" valign="middle" class="cvtitle">
+              Project Experience
+            </td>
+          </tr>
+          <tr>
+            <td height="5" align="left" valign="middle"></td>
+          </tr>
+          <tr>
+            <td align="left" valign="middle">
+              <table
+                width="100%"
+                border="0"
+                cellspacing="0"
+                cellpadding="0"
+                class="table_set"
+              >
+                <tbody>
+                  <tr>
+                    <td colspan="2" class="text_left"><b>Cloud Campus</b></td>
+                  </tr>
+                  <tr>
+                    <td class="text_left" valign="top">Tools:</td>
+                    <td class="text">
+                      Android Studio, Xcode, MySQL, VS Code, Chrome DevTools
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text_left" valign="top">Description:</td>
+                    <td class="Cur_Val">
+                      Cloud Campus is an online learning platform that delivers
+                      multiple ways of teaching and learning for our cooperative
+                      education programs. <br />The first version is developed
+                      using React Native, technics including React Navigation,
+                      API, Redux, and Express.js. <br />Website:
+                      <span class="my-bold"
+                        >https://www.cloudcampus.com.au</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text_left" valign="top">Responsibility:</td>
+                    <td class="Cur_Val">
+                      1. I am taking the lead and playing a highly effective
+                      role in the project, developing Android and iOS
+                      applications independently, and conducting end-to-end
+                      tests.
+                      <br />2. The project implemented the whole website
+                      functions, based on the web service API. In addition,
+                      there are other, e.g. notification, download, video
+                      encryption/decryption, etc. <br />3. Published in Apple
+                      App Store and Google Play.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text_left" valign="top">Links:</td>
+                    <td class="Cur_Val">
+                      <span class="my-bold"
+                        >https://itunes.apple.com/au/app/cloud-campus/id1170990664?mt=8</span
+                      >
+                      <br /><span class="my-bold"
+                        >https://play.google.com/store/apps/details?id=com.aemg.CloudProject</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="center" valign="middle">
+                      <hr size="1" noshade="noshade" />
+                    </td>
+                  </tr>
+                  <!-- add more experience -->
+                  <tr>
+                    <td colspan="2" class="text_left"><b>Express100</b></td>
+                  </tr>
+                  <tr>
+                    <td class="text_left" valign="top">Tools:</td>
+                    <td class="text">
+                      Eclipse, Oracle, MongoDB, Node.js, Android Studio, Xcode
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text_left" valign="top">Description:</td>
+                    <td class="Cur_Val">
+                      Express100 provides services that include intelligent
+                      query, delivery status push, courier management, query the
+                      delivery time, one-click lookup nearby courier, send
+                      express online, etc. Express100 is the largest Chinese
+                      express service platform. Express100 mobile terminal has
+                      daily active users of more than 600,000 and the cumulative
+                      number of registered users is more than 20,000,000.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text_left" valign="top">Responsibility:</td>
+                    <td class="Cur_Val">
+                      In charge of two applications development: Express100 and
+                      Courier100. <br />Featured functions: <br />1. E-commerce
+                      order import. <br />2. Mobile phone proxy service.
+                      <br />3. Search nearby couriers. <br />4. Intelligent
+                      query expresses information. <br />5. Message management.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="center" valign="middle">
+                      <hr size="1" noshade="noshade" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><b>Android Digital Billboard</b></td>
+                  </tr>
+                  <tr>
+                    <td valign="top">Tools:</td>
+                    <td class="text">Eclipse, FileZilla, MySQL Workbench</td>
+                  </tr>
+                  <tr>
+                    <td valign="top">Description:</td>
+                    <td class="Cur_Val">
+                      An Android application with the following features:
+                      <br />1. Socket communication, according to the company
+                      protocol. <br />2. FTP download task. <br />3. Integrated
+                      media functions. <br />4. XML Encapsulation and unpack.
+                      <br />5. Heartbeat to maintain long-lasting communication.
+                      <br />6. Multi-threaded pool and asynchronous processing.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">Responsibility:</td>
+                    <td class="Cur_Val">
+                      Responsible for the software architecture build, UI, and
+                      UX implementation. <br />Implement background
+                      communication interaction.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-</body>
-
+  </body>
 </html>
